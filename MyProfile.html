@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MyProfile.css">    
+    <title>My Profile</title>
+</head>
+<body>
+    <h1 style="text-align: center">Welcome to My Profile</h1>
+    <header>        
+        <!-- Add ARIA roles where necessary (e.g., role="navigation" for the nav bar).-->
+        <div class="menubar">
+            <!-- Add a hamburger icon -->
+            <a href="#" class="hamburger-icon" onclick="ToggleMenu()">☰</a>
+            <nav id="menu">
+                <!-- Create menu bar with a hamburger icon and on the click of hamburger icon, the menu items should be toggled -->
+                <ul>
+                    <li class="menucls"><a href="#home">HOME</a></li>
+                    <li class="menucls"><a href="#about">ABOUT</a></li>
+                    <li class="menucls"><a href="#projects">PROJECTS</a></li>
+                    <li class="menucls"><a href="#skills">SKILLS</a></li>
+                    <li class="menucls"><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+       <section id="about-me" class="about-me">
+       <h2>About Me</h2>
+       <p>I am a web developer with a passion for creating interactive and user-friendly websites.
+        I have experience in C#, HTML, CSS, JavaScript. I enjoy learning new technologies and improving my skills.
+        In my free time, I like to work on personal projects and learn new programming languages.</p>
+        </section>
+        <section id="projects" class="about-me">            
+            <h2>My Projects</h2>
+            <div class="project-filters">  <!-- create a filter feature for the “Projects” section -->
+                <label for="project-filter">Filter:</label>
+                <select id="project-filter" onchange="filterProjects(this.value)">
+                    <option value="all">All</option>
+                    <option value="html">HTML/JS</option>
+                    <option value="async">Async JS</option>
+                    <option value="css">CSS</option>
+                </select>
+            </div>
+            <!-- The Modal -->                
+            <div id="myModal" class="modal" onclick="closeModal()">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modal-image">
+            </div>
+            <article class="projects html all">                
+                <h3>ToDoList App</h3>
+                <figure>
+                    <img src="ToDoList.png" alt="To Do List App Screenshot" style="width:100%;max-width:300px" onclick="openModal('ToDoList.png')">
+                    <figcaption>HTML and Javascript application 'To Do List'</figcaption>
+                </figure>
+                <p>Created a simple HTML and Javascript application 'To Do List'. This was done to practice DOM functionality in Javascript.
+                    User can add a task and click the button 'Add Task'. Javascript will read the text from textbox and create a list item appends it to the unordered list.
+                    The list items were added with an event when clicked on them could be deleted. Application displays error if user tries to enter empty string and clicks on 'Add Task'.</p>
+            </article>
+            <article class="projects async all">
+                <h3>Async Javascript App</h3>
+                <figure>
+                    <img src="Async Javascript Lab.png" alt="Async Javascript App Screenshot" style="width:100%;max-width:300px" onclick="openModal('Async Javascript Lab.png')">
+                    <figcaption>Asynchronous Javascript application</figcaption>
+                </figure>
+                <p>This was a simple application to demonstrate different types of asynchrnous calls using javascript. There are four buttons to fetch data from API 
+                    'Fetch using callback', 'Fetch using Promise', 'Fetch using Async/Await' and to demonstrate 'Error Handling' while using asynchronous calls to API</p>
+            </article>
+            <article class="projects css all">
+                <h3>Responsive Portfolio</h3>
+                <figure>
+                    <img src="Portfolio.png" alt="Responsive personal portfolio Screenshot" style="width:100%;max-width:300px" onclick="openModal('Portfolio.png')"> 
+                    <figcaption>Responsive personal portfolio</figcaption>
+                </figure>
+                <p>This is the current project you are seeing. This page handles styles in a seperate .css file. It focuses on responsive web design techniques. 
+                    This project implements smooth scrolling behavior for links in the navigation, modal image view for images, toggle menu option on clicking hamburger icon, validates inputs in the contact form using javascript.</p>
+            </article>
+        </section>
+    <section id="skills"></section>        
+        <div class="about-me">
+            <h2>Skills</h2>
+            <div>
+                <h3>Programming Languages</h3>
+                <ul class="skills">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>C#</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Frameworks & Libraries</h3>
+                <ul class="skills">
+                    <li>ASP.NET</li>
+                    <li>React</li>
+                    <li>Bootstrap</li>
+                    <li>jQuery</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Tools & Technologies</h3>
+                <ul class="skills">
+                    <li>Git</li>
+                    <li>VS Code</li>
+                    <li>Visual Studio</li>
+                    <li>SQL Server</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="contact"></section>
+    <div class="about-me">
+        <h2>Contact Me</h2>
+        <form id="contact-form" action="#" method="POST" class="about-me">
+            <div class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+    </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Profile</p>
+    </footer>
+    <script src="MyProfile.js"></script>
+</body>
+</html>

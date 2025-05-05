@@ -1,0 +1,326 @@
+/* Basic Styling for the header and navigation bar for layout, color scheme, and typography */
+header {
+    background-color: black; /* Header background color */
+    color: white; /* Header text color */
+    text-align: center; /* Centered text */
+    padding: 10px; /* Padding around header */
+    font-family:'Times New Roman', Times, serif; /* Font family for header text */
+    font-size: 24px; /* Font size for header text */
+}
+
+/* Show the hamburger icon on smaller screens */
+@media (max-width: 768px) {
+    .hamburger-icon {
+        display: block; /* Show on smaller screens */
+    }
+}
+/* style the div menubar with items in each column  hamburgericon home about projects skills contact */
+.menubar {
+    display: flex; /* Flexbox layout for the menu bar */
+    justify-content:center; /* Space between items */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Padding around menu bar */
+    background-color: black; /* Menu bar background color */
+    color: white; /* Menu bar text color */
+}
+
+.menubar .hamburger-icon {
+    color: white; /* Hamburger icon color */
+    display:block; /* Display inline for larger screens */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 24px; /* Font size for hamburger icon */
+}
+
+/* Basic Styling for the navigation bar */
+nav {
+    background-color: black; /* Navigation bar background color */
+    color: white; /* Navigation bar text color */
+    font-family: 'Times New Roman', Times, serif; /* Font family for navigation bar text */
+    font-size: 16px; /* Font size for navigation bar text */
+    display: flex; /* Block display for navigation bar */
+}
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+        nav ul li {
+            margin-right: 15px;
+            font-family: 'Times New Roman', Times, serif; /* Font family for navigation items */
+            font-size: 16px; /* Font size for navigation items */
+            padding: 0px; /* Padding around navigation items */
+            width: 100px; /* Fixed width for navigation items */
+        }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+            }
+
+            nav ul li a:hover {
+                text-decoration: underline;
+            }
+
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 2px solid #005fcc; /* High-contrast focus outline */
+    outline-offset: 2px;
+}
+/*Set basic styles for the body (e.g., font-family, margin, padding, background-color). */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin:0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+
+/*  style the “About Me” section, focusing on text alignment, font size, and spacing.*/
+.about-me{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* create a card-like layout for the “Projects” section. Use properties like display: flex, margin, and padding. */
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;  
+    gap: 10px;
+    justify-content:center;
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center; /* Center items vertically */
+    flex: 1; /* Flex property to allow cards to grow and shrink */
+}
+.project-filters{    
+    display:flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    gap: 10px;
+    background-color: white;
+    border-radius: 4px;
+
+}
+
+/* Style the “Skills” list with icons, to suggest CSS pseudo-classes like ::before for adding icons. */
+.skills {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+}
+
+.skills li::before {
+    content: '⭐';
+    position: absolute;
+    left: 0;
+    color: #ffd700;
+}
+
+.skills li:hover::before {
+    content: '★';
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
+
+/* Style contact-form class to disaply as a grid with two columns */
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Style button to display in blue color, add .hover */
+button {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin: 0 auto;
+    display: block;
+}
+
+button:hover {
+    background-color: #0052a3;
+}
+/* Basic Styling for footer */
+footer {
+    background-color: black; /* Footer background color */
+    color: white; /* Footer text color */
+    text-align: center; /* Centered text */
+    padding: 10px; /* Padding around footer */
+    position: relative; /* Allows for absolute positioning of child elements */
+    bottom: 0; /* Sticks the footer to the bottom of the page */
+    width: 100%; /* Ensures the footer takes up the full width of the page */
+}
+
+/* add media queries that adjust the layout for different screen sizes.*
+/* Mobile-first responsive design */
+@media (max-width: 480px) {
+    .menubar {
+        flex-direction: column;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+    .projects {
+        flex-direction: column;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 481px) and (max-width: 768px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+    nav ul li {
+        width: auto;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+    .hamburger-icon {
+        display: none;
+    }
+}
+
+/* add vendor prefixes for CSS properties that require it*/
+/* Vendor prefixes for flexbox */
+.menubar, nav, .projects {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+}
+
+/* Vendor prefixes for transforms */
+.skills li:hover::before {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* Vendor prefixes for transitions */
+button, .skills li::before {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* Vendor prefixes for box-shadow */
+.about-me, .projects, .skills, .contact-form {
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ /* The Modal (background) */
+  
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 150px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+    
+    /* Modal Content (image) */
+    .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    }
+    
+    
+    /* Add Animation */
+    .modal-content {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    }
+    
+    @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+    }
+    
+    @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+    }
+    
+    /* The Close Button */
+    .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+    
+    .close:hover,
+    .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+    }
