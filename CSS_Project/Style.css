@@ -63,7 +63,6 @@ section {
     The 3rd section should be in the second row and take up the entire row by itself.*/
     section:nth-child(-n+2) {
         width: calc(50% - 22px);
-        width: calc(50% - 22px);
         float: left;
     }
     section:nth-child(3) {
