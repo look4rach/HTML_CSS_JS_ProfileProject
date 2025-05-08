@@ -27,7 +27,7 @@ section {
     text-align:center;
     width: 100px;
     float: right;
-    border: 1px solid black;    
+    border: 1px solid black;
 }
 
 #summer{
@@ -63,6 +63,7 @@ section {
     The 3rd section should be in the second row and take up the entire row by itself.*/
     section:nth-child(-n+2) {
         width: calc(50% - 22px);
+        width: calc(50% - 22px);
         float: left;
     }
     section:nth-child(3) {
@@ -73,17 +74,11 @@ section {
 
 
 /*Mobile view should appear only if the width of the browser is equal to or less than 767px */
-@media(max-width: 767px){
-    /*each section should take up the entire row*/
+@media(max-width: 767px)
+{
+    /*each section should take up the entire row subtract 22px (2 times 10px margin and 2 times 2px border*/
     section {
         width: calc(100% - 22px);
         float: left;
     }
 }
-
-
-
-
-
-
-
