@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+h1 {
+    text-align: center;
+    width: 100%;
+}
+section {
+    flex: 1;    
+    border: 1px solid black;
+    margin: 10px;
+    box-sizing: border-box;    
+    background-color: gray;
+}
+.section-para{
+    padding: 10px;
+}
+
+.section-title {   
+    background-color:darksalmon;    
+    position: relative;
+    top: 0;
+    right: 0;
+    text-align:center;
+    width: 100px;
+    float: right;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#summer{
+    background-color: lightgreen;
+}
+     
+#winter{
+    background-color: white;
+}
+
+#spring{
+    background-color: pink;
+}
+/* display a desktop version of the site when the width of the browser window is 992px and above*/
+@media (min-width: 992px)
+{
+    .row{
+        display:flex;
+        justify-content: space-between;
+    }
+    /*3 sections should take up equal amount of space on the screen */
+    section {
+        width: calc(33.33% - 22px);
+        margin: 10px;
+        border: 2px solid black;
+        box-sizing: border-box;
+    }
+    
+
+}
+
+/*Tablet view should appear only if the width of the browser window is between 768px and 991px, inclusively */
+@media(min-width: 768px) and (max-width: 991px)
+{
+    /* the first 2 sections should be in the first row and be of equal size. 
+    The 3rd section should be in the second row and take up the entire row by itself.*/
+    section:nth-child(-n+2) {
+        width: 50%;
+        float: left;
+    }
+    section:nth-child(3) {
+        width: 100%;
+        float: left;
+    }
+}
+
+/*Mobile view should appear only if the width of the browser is equal to or less than 767px */
+@media(max-width: 767px)
+{
+    /*each section should take up the entire row*/
+    section {
+        width: 100%;
+        float: left;
+    }
+}
