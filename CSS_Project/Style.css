@@ -79,7 +79,7 @@ section {
 /*Mobile view should appear only if the width of the browser is equal to or less than 767px */
 @media(max-width: 767px)
 {
-    /*each section should take up the entire row*/
+    /*each section should take up the entire row subtract 22px (2 times 10px margin and 2 times 2px border*/
     section {
         width: calc(100% - 22px);
         float: left;
