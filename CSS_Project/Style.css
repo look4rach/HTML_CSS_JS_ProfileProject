@@ -71,7 +71,7 @@ section {
         float: left;
     }
     section:nth-child(3) {
-        width: 100%;
+        width: calc(100% - 22px);
         float: left;
     }
 }
@@ -81,7 +81,7 @@ section {
 {
     /*each section should take up the entire row*/
     section {
-        width: 100%;
+        width: calc(100% - 22px);
         float: left;
     }
 }
