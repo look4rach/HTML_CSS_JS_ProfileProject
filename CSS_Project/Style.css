@@ -16,20 +16,18 @@ section {
     box-sizing: border-box;    
     background-color: gray;
 }
-.section-para{
-    padding: 10px;
+.section-para{   
+    padding: 10px;   
 }
 
-.section-title {   
-    background-color:darksalmon;    
+.section-title {     
     position: relative;
     top: 0;
     right: 0;
     text-align:center;
     width: 100px;
     float: right;
-    border: 1px solid black;
-    padding: 5px;
+    border: 1px solid black;    
 }
 
 #summer{
@@ -43,9 +41,9 @@ section {
 #spring{
     background-color: pink;
 }
+
 /* display a desktop version of the site when the width of the browser window is 992px and above*/
-@media (min-width: 992px)
-{
+@media (min-width: 992px){
     .row{
         display:flex;
         justify-content: space-between;
@@ -57,17 +55,14 @@ section {
         border: 2px solid black;
         box-sizing: border-box;
     }
-    
-
 }
 
-/*Tablet view should appear only if the width of the browser window is between 768px and 991px, inclusively */
-@media(min-width: 768px) and (max-width: 991px)
-{
+
+@media(min-width: 768px) and (max-width: 992px){ 
     /* the first 2 sections should be in the first row and be of equal size. 
     The 3rd section should be in the second row and take up the entire row by itself.*/
     section:nth-child(-n+2) {
-        width: 50%;
+        width: calc(50% - 22px);
         float: left;
     }
     section:nth-child(3) {
@@ -76,12 +71,19 @@ section {
     }
 }
 
+
 /*Mobile view should appear only if the width of the browser is equal to or less than 767px */
-@media(max-width: 767px)
-{
+@media(max-width: 767px){
     /*each section should take up the entire row*/
     section {
         width: calc(100% - 22px);
         float: left;
     }
 }
+
+
+
+
+
+
+
